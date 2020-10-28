@@ -85,13 +85,27 @@ $(document).ready(function () {
     interval -= 10;
   }
 
+  //Create answer buttons
+  function answerButtons() {
+    //determine whether to generate 2 answer buttons or four
+    $("#btn-0").html(myQuestions[0].answers[0]);
+    $("#btn-1").html(myQuestions[0].answers[1]);
+    // if (myQuestions.answers.length > 2){
+    //   $("#btn-0").html(myQuestions[0].answers[0]);
+    //   $("#btn-1").html(myQuestions[0].answers[1]);
+    //   $("#btn-2").html(myQuestions[0].answers[2]);
+    //   $("#btn-3").html(myQuestions[0].answers[3]);
+    // } else {
+    //   $("#btn-0").html(myQuestions[0].answers[0]);
+    //   $("#btn-1").html(myQuestions[0].answers[1]);
+    // }
+  }
+
   function createQuiz() {
-      // $("#questions").text("quiz goes here 3");
-      // var question = JSON.stringify(myQuestions.question);
-      // $("#questions").append(myQuestions.question);
-      console.log("myQuestions[0].question: ", myQuestions[0].question);
-    $("#questions").append("<p>quiz goes here:1</p>");
-    // $("#questions").html(myQuestions.question[0]);
+    //print question to the page
+    // console.log("myQuestions[0].question: ", myQuestions[0].question);
+    $("#questions").append(myQuestions[0].question);
+    answerButtons();
   }
 
   //on click of Start Quiz, the timer starts counting down, the html element id quiz is made visible, the start quiz button and the rules disappear
@@ -102,7 +116,6 @@ $(document).ready(function () {
     $("#start").hide();
     $("#rules").hide();
     createQuiz();
-    // createQuiz();
   });
 
   //clear timer if quiz is finished and user has clicked Display Score (#submit) button
