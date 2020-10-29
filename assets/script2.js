@@ -88,18 +88,23 @@ $(document).ready(function () {
   //Create answer buttons
   function answerButtons() {
     //determine whether to generate 2 answer buttons or four
-    // $("#btn-0").html(myQuestions[0].answers[0]);
-    // $("#btn-1").html(myQuestions[0].answers[1]);
-    if (myQuestions.answers.length > 2) {
-      $("#btn-0").html(myQuestions[0].answers[0]);
-      $("#btn-1").html(myQuestions[0].answers[1]);
-      $("#btn-2").html(myQuestions[0].answers[2]);
-      $("#btn-3").html(myQuestions[0].answers[3]);
-    } else {
-      $("#btn-0").html(myQuestions[0].answers[0]);
-      $("#btn-1").html(myQuestions[0].answers[1]);
-      $("#btn-2").hide();
-      $("#btn-3").hide();
+
+    for (i = 0; i < myQuestions[2].answers[i].length; i++) {
+      console.log(
+        "myQuestions.answers[i].length: ",
+        myQuestions[2].answers[i].length
+      );
+      // if (myQuestions[2].answers.length > 2) {
+      //   $("#btn-0").html(myQuestions[2].answers[0]);
+      //   $("#btn-1").html(myQuestions[2].answers[1]);
+      //   $("#btn-2").html(myQuestions[2].answers[2]);
+      //   $("#btn-3").html(myQuestions[2].answers[3]);
+      // } else {
+      //   $("#btn-0").html(myQuestions[2].answers[0]);
+      //   $("#btn-1").html(myQuestions[2].answers[1]);
+      //   $("#btn-2").hide();
+      //   $("#btn-3").hide();
+      // }
     }
   }
 
